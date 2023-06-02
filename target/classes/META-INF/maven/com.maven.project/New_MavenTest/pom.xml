@@ -20,6 +20,12 @@
 		<maven.compiler.target>1.8</maven.compiler.target>
 	</properties>
 	<dependencies>
+		<!-- https://mvnrepository.com/artifact/com.github.stephenc.monte/monte-screen-recorder -->
+		<dependency>
+			<groupId>com.github.stephenc.monte</groupId>
+			<artifactId>monte-screen-recorder</artifactId>
+			<version>0.7.7.0</version>
+		</dependency>
 		<!-- https://mvnrepository.com/artifact/com.github.ralfstuckert.pdfbox-layout/pdfbox2-layout -->
 		<dependency>
 			<groupId>com.github.ralfstuckert.pdfbox-layout</groupId>
@@ -43,14 +49,14 @@
 		<dependency>
 			<groupId>org.seleniumhq.selenium</groupId>
 			<artifactId>selenium-java</artifactId>
-			<version>4.8.1</version>
+			<version>4.8.2</version>
 		</dependency>
 		<!-- https://mvnrepository.com/artifact/org.testng/testng -->
 		<dependency>
 			<groupId>org.testng</groupId>
 			<artifactId>testng</artifactId>
-			<version>6.14.3</version>
-			<scope>test</scope>
+			<version>7.1.0</version>
+			<scope>compile</scope>
 		</dependency>
 		<!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-java -->
 		<dependency>
@@ -144,6 +150,19 @@
 			<version>4.11</version>
 			<scope>test</scope>
 		</dependency>
+		<dependency>
+			<groupId>MAVEN_ADVANCED_SUN</groupId>
+			<artifactId>Revision_Project</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+		
+		<!-- https://mvnrepository.com/artifact/com.aventstack/extentreports -->
+		<dependency>
+			<groupId>com.aventstack</groupId>
+			<artifactId>extentreports</artifactId>
+			<version>5.0.9</version>
+		</dependency>
+
 	</dependencies>
 	<build>
 		<pluginManagement>
@@ -170,6 +189,7 @@
 					<configuration>
 						<suiteXmlFiles>
 							<suiteXmlFile>testng.xml</suiteXmlFile>
+							<!--  <suiteXmlFile>target/surefire-reports/testing-failed.xml</suiteXmlFile>   -->
 						</suiteXmlFiles>
 					</configuration>
 				</plugin>
@@ -195,6 +215,6 @@
 					<version>3.0.0</version>
 				</plugin>
 			</plugins>
-		</pluginManagement>
-	</build>
+    </pluginManagement>
+  </build>
 </project>
